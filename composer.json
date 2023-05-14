@@ -1,32 +1,32 @@
 {
-    "name": "openlab/make-place",
-    "description": "A Silverstripe project to be deployed through docker",
-    "require": {
-        "php": ">=5.3.3",
-        "silverstripe/cms": "3.4.1",
-        "silverstripe/framework": "3.4.1",
-        "silverstripe/reports": "3.4.1",
-        "silverstripe/siteconfig": "3.4.1",
-        "silverstripe/blog": "^2.4",
-        "monolog/monolog": ">=1.0.0",
-        "aws/aws-sdk-php": "^3.19",
-        "facebook/graph-sdk" : "~5.0",
-        "undefinedoffset/sortablegridfield": "^0.6.5",
-        "silverstripe/sqlite3": "1.4.0",
-        "google/apiclient": "^2.0",
-        "unclecheese/display-logic": "^1.5"
-    },
-    "require-dev": {
-        "phpunit/PHPUnit": "~4.4@stable"
-    },
-    "extra": {
-        "branch-alias": {
-            "3.x-dev": "3.4.x-dev"
-        }
-    },
-    "config": {
-        "process-timeout": 600
-    },
-    "prefer-stable": true,
-    "minimum-stability": "dev"
+  "name": "openlab/make-place",
+  "description": "A Silverstripe project to be deployed through docker",
+  "require": {
+    "php": ">=5.3.3",
+    "silverstripe/cms": "3.4.1",
+    "silverstripe/framework": "3.4.1",
+    "silverstripe/reports": "3.4.1",
+    "silverstripe/siteconfig": "3.4.1",
+    "silverstripe/blog": "^2.4",
+    "monolog/monolog": ">=1.0.0",
+    "aws/aws-sdk-php": "^3.19",
+    "facebook/graph-sdk": "~5.0",
+    "undefinedoffset/sortablegridfield": "^0.6.5",
+    "silverstripe/sqlite3": "1.4.0",
+    "google/apiclient": "^2.0",
+    "unclecheese/display-logic": "^1.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.4@stable"
+  },
+  "extra": {
+    "branch-alias": {
+      "3.x-dev": "3.4.x-dev"
+    }
+  },
+  "config": {
+    "process-timeout": 600
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
 }
