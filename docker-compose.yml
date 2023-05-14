@@ -87,7 +87,21 @@ services:
     #   - 3000:3000
     expose:
       - 3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+      - "traefik.http.services.geo.loadbalancer.server.port=3000"
+      - "traefik.http.routers.geo.rule=Host(`geo.${DEPLOYMENT}`)"
+      - "traefik.http.routers.geo.tls.certresolver=myresolver"
+      - "traefik.http.middlewares.geo-ratelimit.ratelimit.average=10"
+      - "traefik.http.middlewares.geo-ratelimit.ratelimit.burst=10"
+      - "traefik.http.middlewares.geo-ratelimit.ratelimit.period=1"
+      - "traefik.http.routers.geo.entrypoints=websecure"
+      - "traefik.http.routers.geo.tls=true"
+      - "traefik.http.routers.geo.middlewares=geo-ratelimit@docker"
+    env_file: .env
     networks:
+      - web
       - backend
     links:
       - mysql
