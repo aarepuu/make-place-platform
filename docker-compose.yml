@@ -106,5 +106,5 @@ services:
     links:
       - mysql
     environment:
-      SQL_URL: mysql://${DB_USER}:${DB_PASS}@${DB_HOST}/geo
+      SQL_URL: mysql://${DB_USER}:${DB_PASS}@${DB_HOST}/${GEO_DB_NAME}
       NODE_ENV: ${NODE_ENV}
