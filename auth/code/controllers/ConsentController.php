@@ -60,7 +60,8 @@ class ConsentController extends ContentController {
     
     public function getAdminLink() {
         $email = CONTACT_EMAIL;
-        return "<a href='mailto:$email?subject=make.place'>$email</a>";
+        $deployment = DEPLOYMENT;
+        return '<a href="mailto:'.$email.'?subject='.$deployment.'">'.$email.'</a>';
     }
     
     public function getTermsLink() {
