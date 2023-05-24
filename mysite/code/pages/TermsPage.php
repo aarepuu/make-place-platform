@@ -20,7 +20,8 @@ class TermsPage_Controller extends Page_Controller {
     
     public function getContactEmailLink() {
         $email = CONTACT_EMAIL;
-        return '<a href="mailto:'.$email.'?subject=make.place">'.$email.'</a>';
+        $deployment = DEPLOYMENT;
+        return '<a href="mailto:'.$email.'?subject='.$deployment.'">'.$email.'</a>';
     }
     
     public function getPrivacyLink() {

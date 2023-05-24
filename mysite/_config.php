@@ -53,10 +53,6 @@ if (isset($_SERVER['DEFAULT_USER']) && isset($_SERVER['DEFAULT_PASS'])) {
 Director::set_environment_type(_envVar('SITE_ENV', 'live'));
 
 
-
-
-
-
 // Define the recaptcha keys, defaulting to localhost ones
 define('G_RECAPTCHA_PUBLIC', _envVar('G_RECAPTCHA_PUBLIC', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'));
 define('G_RECAPTCHA_SECRET', _envVar('G_RECAPTCHA_SECRET', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'));
@@ -74,6 +70,9 @@ define('AWS_USERNAME', _envVar('AWS_USERNAME', 'NO_AWS_USER_PROVIDED'));
 // Define facebook OAuth keys
 define('FB_APP_ID', _envVar('FB_APP_ID', 'NO_FB_APP_ID_PROVIDED'));
 define('FB_SECRET', _envVar('FB_SECRET', 'NO_FB_SECRET_ID_PROVIDED'));
+
+// Define deployment 
+define("DEPLOYMENT", _envVar("DEPLOYMENT", "make.place"));
 
 // Setup the admin email
 define("ADMIN_EMAIL", _envVar("ADMIN_EMAIL", "noreply@openlab.ncl.ac.uk"));

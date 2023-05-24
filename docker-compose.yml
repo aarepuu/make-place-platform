@@ -25,17 +25,17 @@ services:
       - mysql
       - geo
     volumes:
-      - ./mysite:/app/mysite
-      - ./themes:/app/themes
+      # - ./mysite:/app/mysite
+      # - ./themes:/app/themes
       - ./assets:/app/assets
-      - ./scripts:/app/scripts
-      - ./surveys:/app/surveys
-      - ./auth:/app/auth
-      - ./maps:/app/maps
-      - ./logs:/app/logs
-      - ./public:/app/public
-      - ./interaction:/app/interaction
-      - ./_config/phpunit.xml:/app/phpunit.xml:ro
+      # - ./scripts:/app/scripts
+      # - ./surveys:/app/surveys
+      # - ./auth:/app/auth
+      # - ./maps:/app/maps
+      # - ./logs:/app/logs
+      # - ./public:/app/public
+      # - ./interaction:/app/interaction
+      # - ./_config/phpunit.xml:/app/phpunit.xml:ro
     expose:
       - 80
     networks:
