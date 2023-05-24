@@ -8,7 +8,8 @@ networks:
 
 volumes:
   database_data:
-    driver: local
+  sms_assets:
+
 
 services:
   web:
@@ -27,7 +28,7 @@ services:
     volumes:
       # - ./mysite:/app/mysite
       # - ./themes:/app/themes
-      - ./assets:/app/assets
+      - sms_assets:/app/assets
       # - ./scripts:/app/scripts
       # - ./surveys:/app/surveys
       # - ./auth:/app/auth
